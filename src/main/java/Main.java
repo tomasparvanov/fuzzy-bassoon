@@ -34,6 +34,7 @@ public class Main {
         out.close();
         System.out.println(String.format("Process completed. [%d] files were created.", counter));
 
+        // List the files created
         File dir = new File(".");
         File[] filesList = dir.listFiles();
         for (File file : filesList) {
@@ -41,11 +42,6 @@ public class Main {
                 System.out.println(file.getName());
             }
         }
-        in = new Scanner(new FileInputStream("out-000.txt"));
-        while (in.hasNextLine()) {
-            System.out.println(in.nextLine());
-        }
-        in.close();
 
     }
 
